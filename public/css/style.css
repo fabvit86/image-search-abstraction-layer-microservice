@@ -1,0 +1,18 @@
+h1{
+	text-align: center;
+}
+a, a:visited{
+	color: mediumblue;
+}
+p#credits-p{
+	text-align: center;
+	margin-top: 200px;
+	color: mediumblue;
+}
+p#credits-p a{
+	color: red;
+	cursor: pointer;
+}
+p#credits-p a:hover{
+	color: brown;
+}

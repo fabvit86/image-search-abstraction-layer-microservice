@@ -1,0 +1,18 @@
+{
+  "name": "imagesearchalmicroservice",
+  "version": "1.0.0",
+  "description": "Image Search Abstraction Layer FCC Project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Fabrizio Vitelli",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "express": "^4.15.3",
+    "mongoose": "^4.10.6",
+    "request": "^2.81.0"
+  }
+}
