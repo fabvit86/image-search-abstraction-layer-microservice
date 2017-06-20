@@ -8,7 +8,7 @@
 			<h1>Image Search Abstraction Layer</h1>
 			<p>USAGE:
 				<ol>
-					<li>Search for images passing a search string in the URL, using the /search/:searchString path. The API will return the image URLs, snippets and page URLs of the first 10 search results.</li>
+					<li>Search for images passing a search string in the URL, using the /search/:searchString path. The API will return the image URLs, snippets, thumbnails and page URLs of the first 10 search results.</li>
 					<li>To paginate through the results, append an offset parameter to the URL (e.g.: ?offset=11).</li>
 					<li>To view a list of the 10 most recently submitted search string, use the /recentsearches path.</li>
 				</ol>
@@ -16,9 +16,9 @@
 			<p>
 				EXAMPLES:
 				<ul>
-					<li>Visiting <a href='https://fabvit86-urlshort-ms.herokuapp.com/getnewurl/http://www.nba.com'></a> will to search for cats images.</li>
-					<li>Visit to view the next ten images.</li>
-					<li>Visit to view the 10 most recently submitted search string.</li>
+					<li>Visiting <a href='https://fabvit86-imgsearch-ms.herokuapp.com/search/funny dogs' target="_blank">https://fabvit86-imgsearch-ms.herokuapp.com/search/funny dogs</a> will search for funny dogs images.</li>
+					<li>Visit <a href='https://fabvit86-imgsearch-ms.herokuapp.com/search/funny dogs?offset=11' target="_blank">https://fabvit86-imgsearch-ms.herokuapp.com/search/funny dogs?offset=11</a> to view the next ten images.</li>
+					<li>Visit <a href='https://fabvit86-imgsearch-ms.herokuapp.com/recentsearches' target="_blank">https://fabvit86-imgsearch-ms.herokuapp.com/recentsearches</a> to view the 10 most recently submitted search string.</li>
 				</ul>
 			</p>
 		</div>
