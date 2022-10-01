@@ -5,7 +5,7 @@ const express = require('express'),
 	mongoose = require('mongoose');
 
 const app = express();
-require('dotenv').load(); //inizialize the dotenv Node module
+require('dotenv').config(); //inizialize the dotenv Node module
 
 const rootPath = process.cwd();
 
