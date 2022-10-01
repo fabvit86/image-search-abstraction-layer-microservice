@@ -2,7 +2,7 @@
 
 var Searches = require('../models/searches.js'); //Search model
 
-const request = require('request');
+const axios = require('axios');
 
 //get only the needed information from the search result:
 function parseResults(responseBody){
@@ -38,8 +38,7 @@ function SearchHandler(){
 				+'&searchType='+searchType
 				+'&start='+start;
 		//call to Google Custom Search Engine API:
-		request(requestUrl, function(error, response, body){
-			if(error) throw error;
+		axios.get(requestUrl).then(function (response) {
 			if(response.statusCode!==200) return console.log('statusCode:', response && response.statusCode);
 			//save searched keywords and timestamp in db (most recent searches):
 			var currDateTime = new Date();
@@ -47,9 +46,13 @@ function SearchHandler(){
 			search.save(function(err, result){
 				if(err) throw err;
 				//return results:
-				var resArray = parseResults(body);
+				var resArray = parseResults(response.data);
 				res.json(resArray); 
 			});
+		})
+		.catch(function (error) {
+			console.log(error);
+			throw error;
 		});
 	};
 
